@@ -292,7 +292,7 @@ img {
     width: 57.5vw;
     background: url('../images/bg-pattern-desktop.svg');
     background-color: hsl(0, 93%, 99%);
-    background-size: cover;
+    background-size: 57.5vw 100%;
   }
   .hero {
     position: absolute;
