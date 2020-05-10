@@ -316,6 +316,10 @@ img {
   .main-message {
     text-align: left;
     line-height: 2;
+    margin-left: 0;
+  }
+  .form-email {
+    margin-left: auto;
   }
   .attribution {
     text-align: left;
