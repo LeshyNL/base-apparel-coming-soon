@@ -285,33 +285,34 @@ img {
 }
 
 @media screen and (min-width: 1024px) {
-  html {
-    background: url('../images/hero-desktop.jpg');
-    background-position: top 0 left 57.5vw;
-    background-repeat: no-repeat;
-    background-size: 42.5vw auto;
-  }
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 57.5vw;
     background: url('../images/bg-pattern-desktop.svg');
     background-color: hsl(0, 93%, 99%);
     background-size: cover;
   }
   .hero {
-    display: none;
-  }
-  .header, .footer, .main {
-    padding: 1rem 16vw 1rem 11vw;
+    position: absolute;
+    top: 0; right: 0;
+    width: 42.5vw;
+    height: 100%;
+    background: url('../images/hero-desktop.jpg');
+    background-size: cover;
   }
   .header {
-    padding-top: 4rem;
+    padding: 4rem 16vw 2rem 11vw;
+  }
+  .main, .footer {
+    padding: 1rem 16vw 1rem 11vw;
   }
   .main-title {
     text-align: left;
     font-size: 4rem;
     letter-spacing: 1rem;
     max-width: 25rem;
-    margin-top: 5rem;
   }
   .main-message {
     text-align: left;
