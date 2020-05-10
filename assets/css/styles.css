@@ -1,0 +1,326 @@
+/* styles.scss
+   Styles for Base Apparel Coming Soon challenge (Newbie) from Frontend Mentor */
+/*  Modern CSS Reset
+    https://github.com/hankchizljaw/modern-css-reset
+*/
+/* Box sizing rules */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1rem;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Blur images when they have no alt attribute */
+img:not([alt]) {
+  filter: blur(10px);
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* Variables */
+:root {
+  font-size: 14px;
+  --font-sans: "Josefin Sans", "Helvetica", "Arial", sans-serif;
+  --color-primary-light: hsl(0, 36%, 70%);
+  --color-primary-dark: hsl(0, 93%, 68%);
+  --color-neutral-dark: hsl(0, 6%, 24%);
+  --color-neutral-light: hsl(0, 36%, 86%);
+  --gradient-light: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  --gradient-dark: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 75%, 74%));
+}
+
+body {
+  background: var(--gradient-light);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+.header {
+  padding: 2.25rem 2rem;
+}
+
+.logo {
+  margin: initial;
+  max-width: 100px;
+}
+
+.hero {
+  width: 100%;
+  padding-top: calc((250 / 375) * 100%);
+  background-image: url("../images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-title {
+  margin: 3rem 0 1rem;
+  font-size: 2.75rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  color: var(--color-primary-light);
+  line-height: 1.1;
+}
+
+.main-message {
+  font-weight: 600;
+  text-align: center;
+  color: var(--color-primary-light);
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.form-email {
+  position: relative;
+  display: table;
+  width: 100%;
+  margin: 2rem auto;
+  max-width: 40rem;
+}
+
+.input-label {
+  width: 100%;
+}
+
+.input-email {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: transparent;
+  border: 2px solid var(--color-neutral-light);
+  border-radius: 2rem;
+  color: var(--color-primary-light);
+}
+
+.input--error {
+  border: 2px solid var(--color-primary-dark);
+  color: #111;
+}
+
+.label--error::before {
+  content: "!";
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  color: #fefefe;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.75;
+  background-color: var(--color-primary-dark);
+}
+
+.label--error::after {
+  display: block;
+  content: "Please provide a valid email";
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+}
+
+.label--success::after {
+  display: block;
+  content: "Your email address has been added";
+  padding: 0.5rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #111;
+}
+
+.button-submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--gradient-dark);
+  border: 0;
+  border-radius: 2rem;
+  width: 5rem;
+  font-size: 2rem;
+  padding: 1.25rem;
+  font-weight: 200;
+  color: #fefefe;
+  text-align: center;
+}
+
+.button-submit:hover {
+  background: hsl(0, 93%, 88%);
+}
+
+.button-submit::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem 0 var(--color-neutral-light);
+  mix-blend-mode: multiply;
+}
+
+.button-submit:hover::after {
+  box-shadow: 0 1rem 1rem 0 var(--color-neutral-light);
+}
+
+img {
+  margin: 0 auto;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.neutral {
+  color: var(--color-neutral-dark);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+@media screen and (min-width: 800px) {
+  :root {
+    font-size: 16px;
+  }
+  .logo {
+    max-width: initial;
+  }
+  .hero {
+    padding-top: 0;
+    height: 533px;
+  }
+  .main-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  html {
+    background: url('../images/hero-desktop.jpg');
+    background-position: top 0 left 57.5vw;
+    background-repeat: no-repeat;
+    background-size: 42.5vw auto;
+  }
+  body {
+    width: 57.5vw;
+    background: url('../images/bg-pattern-desktop.svg');
+    background-color: hsl(0, 93%, 99%);
+    background-size: cover;
+  }
+  .hero {
+    display: none;
+  }
+  .header, .footer, .main {
+    padding: 1rem 16vw 1rem 11vw;
+  }
+  .header {
+    padding-top: 4rem;
+  }
+  .main-title {
+    text-align: left;
+    font-size: 4rem;
+    letter-spacing: 1rem;
+    max-width: 25rem;
+    margin-top: 5rem;
+  }
+  .main-message {
+    text-align: left;
+    line-height: 2;
+  }
+  .attribution {
+    text-align: left;
+  }
+  .button-submit {
+    width: 6rem;
+  }
+}
