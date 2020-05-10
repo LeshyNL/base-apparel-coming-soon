@@ -308,6 +308,9 @@ img {
   .main, .footer {
     padding: 1rem 16vw 1rem 11vw;
   }
+  .main {
+    margin: 0;
+  }
   .main-title {
     text-align: left;
     font-size: 4rem;
