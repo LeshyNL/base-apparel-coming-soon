@@ -23,4 +23,7 @@ function setState(state){
 
 /* Put an event handler on the button */
 var submit = document.getElementById("button-submit");
-submit.addEventListener("click", validateInput);
+submit.addEventListener("click", function(event){
+  event.preventDefault();
+  validateInput();
+});
